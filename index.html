@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+}
+.container{
+    height: 420px;
+    width:40%;
+    border: 1px solid black;
+}
+.main{
+    height:100px;
+    width:100%;
+    border: 2px solid black;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: rgb(243, 243, 243);
+}
+.sec1{
+    height: 120px;
+    width: 200px;
+    float: left;
+}
+.sec2{
+    height: 120px;
+    width: 200px;
+    float: left;
+}
+.ip1{
+    height: 20px;
+    width:200px;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-radius: 8px;
+}
+.ip2{
+    height:30px;
+    width:400px;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-radius: 8px;
+  }
+  .ip3{
+    height: 20px;;
+    width:130px;
+    margin-top: 10px;
+    /* border-radius: 8px; */
+  }
+  .btn{
+    height: 30px;
+    width:100px;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+  .main1{
+    height:160px;
+    width: 100%;
+  }
+  button{
+    text-align: center;
+    padding: 8px 15px;
+    margin-top: 20px;
+    margin-left: 25px;
+  }
+  .main2{
+    height:100px;
+    width:100%;
+    margin-top: 20px;
+    border: 2px;
+    border-radius: 9px;
+    background-color: rgb(243, 243, 243);
+  }
+  .sec3{
+    height:80px;
+    width:45%;
+    float: left;
+    margin-left: 25px;
+  }
+  .sec4{
+    height:80px;
+    width:45%;
+    float: left;
+  }
+  .del1{
+    margin-left: 220px;
+    border-radius: 8px;
+  }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+    <div class="main">
+        <div id="sec1">
+            <input type="text" placeholder="Title" class="ip1"> <br>
+            <input type="text" placeholder="Description" class="ip2">
+        </div>
+        <div class="sec2">
+            <input type="date" class="ip3"> <br>
+            <button class="btn" onclick="data()">SAVE</button>
+        </div>
+    </div>
+
+   <div id="main1">
+       <button class="sun">SUN</button> &nbsp;&nbsp;&nbsp; 
+       <button class="mon">MON</button> &nbsp;&nbsp;&nbsp;
+        <button class="tue">TUE</button> &nbsp;&nbsp;&nbsp;
+        <button class="wed">WED</button> &nbsp;&nbsp;&nbsp;
+        <button class="thu">THU</button> &nbsp;&nbsp;&nbsp;
+        <button class="fri">FRI</button> &nbsp;&nbsp;&nbsp; 
+        <button class="sat">SAT</button>
+   </div>
+
+   <div class="main2">
+    <div class="sec3">
+      <h4 class="title1">This is title 1</h4>
+      <p class="descp1">Description for title 1</p>
+    </div>
+    <div class="sec4">
+        <button class="del1">DELETE</button>
+    </div>
+   </div>
+
+   <div class="main2">
+    <div class="sec3">
+      <h4 class="title2">This is Title 2</h4>
+      <p class="descp2">Description for title 1</p>
+    </div>
+    <div class="sec4">
+        <button class="del1" onclick="">DELETE</button>
+    </div>
+   </div>
+</div>
+
+<script>
+    function data()
+    {
+       let title1= document.querySelector(".ip1").value;
+       let description1= document.querySelector(".ip2").value;
+
+       let ip1= document.querySelector("h4");
+       ip1.innerHTML=title1;
+
+       let ip2=document.querySelector("p");
+       ip2.innerHTML=description1;
+       
+       let date1= document.querySelector(".ip3").value;
+       let date= new Date;
+       let day= date.getDay();
+       
+    }
+    
+
+
+</script>
+
+</body>
+</html>
